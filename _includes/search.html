@@ -20,10 +20,10 @@
                                 Categories <label class="items-selected"></label>
                             </label>
                             <ul>
-                                {% assign categories = site.posts | group_by: 'category' | sort: 'name' %}
+                                {% assign categories = site.posts | group_by: 'category' %}
                                 {% for category in categories %}
                                 <li>
-                                    {{ category.name }}
+                                    {{ category }}
                                 </li>
                                 {% endfor %}
                             </ul>
