@@ -21,9 +21,9 @@
                             </label>
                             <ul>
                                 {% assign categories = site.posts | group_by: 'category' %}
-                                {% for category in categories %}
+                                {% for post in site.posts %}
                                 <li>
-                                    {{ category }}
+                                    {{ post.category }}
                                 </li>
                                 {% endfor %}
                             </ul>
